@@ -13,7 +13,6 @@ var AppRouter = Backbone.Router.extend({
   },
 
   index: function() {
-    console.log('route:index');
     var view = new ProductsIndexView({
       collection: this.products
     });
