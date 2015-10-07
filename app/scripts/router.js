@@ -13,8 +13,8 @@ var AppRouter = Backbone.Router.extend({
 
   index: function() {
     console.log('route:index');
-    this.products.fetch().then(function(results){
-      console.log(results);
+    this.products.fetch().then( () => {
+      $('#container').append(JST['products/index'](this.products.toJSON()));
     });
   },
 
