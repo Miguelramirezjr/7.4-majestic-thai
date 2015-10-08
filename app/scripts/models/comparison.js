@@ -12,6 +12,10 @@ var Comparison = Backbone.Model.extend({
     }
   },
 
+  removeProduct: function(product) {
+    this.set('products', _.without(this.get('products'), product));
+  },
+
   hasProduct: function(product) {
     return _.contains(this.get('products'), product);
   }

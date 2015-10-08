@@ -18,7 +18,12 @@ var ProductItemView = Backbone.View.extend({
   },
 
   toggleCompared: function(e) {
-    appRouter.comparison.addProduct(this.model);
+    var isCompared = appRouter.comparison.hasProduct(this.model);
+    if(isCompared) {
+      appRouter.comparison.removeProduct(this.model);
+    } else {
+      appRouter.comparison.addProduct(this.model);
+    }
   },
 
   renderClasses: function(){
