@@ -1,6 +1,5 @@
 var ProductItemView = Backbone.View.extend({
-
-  tagName: 'li',
+  className: 'product',
 
   template: JST['products/item'],
 

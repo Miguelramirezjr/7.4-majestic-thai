@@ -8,7 +8,6 @@ var AppRouter = Backbone.Router.extend({
   },
 
   initialize: function() {
-    $('#container').html(JST['application']());
     this.products = new ProductsCollection();
   },
 

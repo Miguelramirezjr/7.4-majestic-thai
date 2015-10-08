@@ -3,11 +3,13 @@ import CollectionView from 'views/collection-view';
 import ProductsCreateView from 'views/products/create';
 
 var ProductsCollectionView = CollectionView.extend({
-  tagName: 'ul',
+  tagName: 'section',
+  className: 'grid',
   ItemViewConstructor: ProductItemView
 });
 
 var ProductsIndexView = Backbone.View.extend({
+  className: 'view',
   initialize: function() {
     this.productsCollectionView = new ProductsCollectionView({
       collection: this.collection
