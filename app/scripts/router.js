@@ -1,3 +1,4 @@
+import Comparison from 'models/comparison';
 import ProductsCollection from 'models/products-collection';
 import ProductsIndexView from 'views/products/index';
 
@@ -9,6 +10,7 @@ var AppRouter = Backbone.Router.extend({
 
   initialize: function() {
     this.products = new ProductsCollection();
+    this.comparison = new Comparison();
   },
 
   index: function() {
