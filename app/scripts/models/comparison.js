@@ -21,4 +21,5 @@ var Comparison = Backbone.Model.extend({
   }
 });
 
+
 export default Comparison;
